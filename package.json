@@ -1,0 +1,55 @@
+{
+  "name": "uxcore-cg-text-ellipsis",
+  "version": "0.1.0",
+  "description": "uxcore-cg-text-ellipsis component for uxcore.",
+  "repository": "https://github.com/uxcore/uxcore-cg-text-ellipsis.git",
+  "author": "DuBilin",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "uxcore-tools run start",
+    "server": "uxcore-tools run server",
+    "lint": "uxcore-tools run lint",
+    "build": "uxcore-tools run build",
+    "test": "uxcore-tools run electron",
+    "coverage": "uxcore-tools run electron-coverage",
+    "pub": "uxcore-tools run pub",
+    "dep": "uxcore-tools run dep",
+    "tnpm-dep": "uxcore-tools run tnpm-dep",
+    "update": "uxcore-tools run update",
+    "tnpm-update": "uxcore-tools run tnpm-update",
+    "saucelabs": "uxcore-tools run saucelabs",
+    "chrome": "uxcore-tools run chrome",
+    "browsers": "uxcore-tools run browsers"
+  },
+  "bugs": {
+    "url": "http://github.com/uxcore/uxcore-cg-text-ellipsis/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "uxcore-cg-text-ellipsis",
+    "CgTextEllipsis",
+    "uxcore",
+    "ellipsis"
+  ],
+  "devDependencies": {
+    "console-polyfill": "^0.2.2",
+    "es5-shim": "^4.5.8",
+    "react": "15.x",
+    "react-dom": "15.x",
+    "react-test-renderer": "15.x",
+    "expect.js": "~0.3.1",
+    "uxcore-tools": "0.2.x",
+    "uxcore-kuma": "*",
+    "kuma-base": "1.x",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "prop-types": "15.x",
+    "uxcore-tooltip": "^0.4.8"
+  },
+  "contributors": [],
+  "license": "MIT"
+}

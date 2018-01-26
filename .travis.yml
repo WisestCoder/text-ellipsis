@@ -1,0 +1,46 @@
+language: node_js
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - xvfb
+
+notification:
+  email:
+    - wsj7552715@hotmail.com
+
+node_js:
+- 6.9.0
+
+before_install:
+- |
+  if ! git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qve '(\.md$)|(\.html$)'
+  then
+    echo "Only docs were updated, stopping build process."
+    exit
+  fi
+  phantomjs --version
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install
+
+
+script:
+- |
+  if [ "$TEST_TYPE" = test ]; then
+    npm test
+  else
+    npm run $TEST_TYPE
+  fi
+env:
+  matrix:
+  - TEST_TYPE=test
+  - TEST_TYPE=coverage
+  - TEST_TYPE=saucelabs
+
+matrix:
+  allow_failures:
+  - env: "TEST_TYPE=saucelabs"
